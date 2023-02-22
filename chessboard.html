@@ -12,16 +12,23 @@
     //flex를 활용하여 row를 기준으로 만든 체스보드판
     //root 변수를 선언하고 DOM안 선언된 #root를 할당
     let root = document.getElementById("root");
+    //root에 스타일 지정
+    root.style.width = "100vw";
+    root.style.height = "100vh";
+    root.style.display = "flex";
+    root.style.flexDirection = "column";
+    root.style.justifyContent = "center";
+    root.style.backgroundColor = "lightgrey";
     //5행을 만들기위해 쓴 for문
-    for (let i = 0; i < 5; i++){
+    for (let i = 0; i < 8; i++){
       //행을 위한 divP 변수 선언, 새로운 div 생성 및 할당.
       let divP = document.createElement("div");
       //divP의 스타일 설정. flex 및 메인축 중앙정렬, 높이를 각각 100px로 설정.
       divP.style.display = "flex";
       divP.style.justifyContent = "center";
       divP.style.height = "100px";
-      //5열을 만들기위해 쓴 for문
-      for(let j = 0; j < 5; j++) {
+      //8열을 만들기위해 쓴 for문
+      for(let j = 0; j < 8; j++) {
         //열을 위한 divC 변수 선언, 새로운 div 생성 및 할당.
         let divC = document.createElement("div");
         //divC의 스타일 설정. 길이를 각각 100px으로 지정
