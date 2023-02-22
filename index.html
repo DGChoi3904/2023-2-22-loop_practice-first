@@ -8,14 +8,38 @@
 </head>
 <body>
   <div id="root"></div>
+  <!--
+    Better Comments 테스트용 주석.
+    이 파일이 HTML이기때문에 아래 적용이 된다.
+    *이것은 초록색이여
+    !허이고 뻘건색이구먼
+    ?이건 왜 퍼런색이여?
+    TODO: 요건 주황색이구먼
+  -->
   <script>
     let pokemon = ["피카츄", "라이츄", "파이리", "꼬부기", "버터풀", "야도란"];
+    
     let root = document.getElementById("root");
     // for loop의 원형 풀이
-    for(let i; i < pokemon.length; i++) {
-      
+    let h1 = document.createElement("h1");
+    h1.textContent = "포켓몬 명단";
+    root.appendChild(h1);
+    let ol1 = document.createElement("ol");
+    root.appendChild(ol1);
+    console.log(root);
+    for(let i = 0; i < pokemon.length; i++) {
+      let li = document.createElement("li");
+      li.textContent= pokemon[i];
+      if(pokemon.indexOf("파이리") == (i)){
+        li.style.backgroundColor = "#edd272";
+      }
+      ol1.appendChild(li);
     }
-
+    /* 여기는 스크립트 구간이라 Better Comments가 적용이 안됩니다.
+    ! 빨간가요?
+    ? 파란가요?
+    * 녹색인가요?
+    */
   </script>
 </body>
 </html>
